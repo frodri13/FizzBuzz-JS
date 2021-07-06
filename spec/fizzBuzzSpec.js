@@ -36,4 +36,19 @@ describe("FizzBuzz", function () {
       expect(fizzBuzz.isDivisibleByFifteen(5)).toBe(false);
     });
   });
+
+  describe("prints", function () {
+    it("Fizz when it is divisible by 3", function () {
+      expect(fizzBuzz.says(3)).toEqual("Fizz");
+    });
+    it("Buzz when it is divisible by 5", function () {
+      expect(fizzBuzz.says(5)).toEqual("Buzz");
+    });
+    it("Buzz when it is divisible by 15", function () {
+      expect(fizzBuzz.says(15)).toEqual("FizzBuzz");
+    });
+    it("Number when it is not divisible by 3/5/15", function () {
+      expect(fizzBuzz.says(1)).toEqual(1);
+    });
+  });
 });
